@@ -1,0 +1,19 @@
+{
+    "path": "dystopia",
+    "type": "game",
+    "daemon": "srcds_linux -game dystopia",
+    "displayName": "Dystopia",
+    "runningCount": 2,
+    "stopCommand": false,
+    "startCommand": "./srcds_linux -game dystopia -debug 2>&1 | ts",
+    "logLocation": "screenlog.0",
+    "icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/17580/9a8eb3ab11d1a9c1e1b33723bb2c989f298c9f19.jpg",
+    "kvSeperator": " ",
+    "preload":["./bin/linux32/", "./bin/"],
+    "steam": {
+      "id": 17585,
+      "name": "Dystopia Dedicated Server",
+      "minPackage": 16,
+      "icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/17580/9a8eb3ab11d1a9c1e1b33723bb2c989f298c9f19.jpg"
+    }
+  }

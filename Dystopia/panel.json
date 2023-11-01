@@ -1,0 +1,72 @@
+{
+    "panel": {
+    "console": {
+      "send": "socket",
+      "regex": "\\w+ \\d+ (\\d+:\\d+:\\d+) (.*)",
+      "levels": {
+        "map": [
+          {
+            "name": "Info",
+            "match": "(.*)",
+            "type": "regex",
+            "colour": "white"
+          }
+        ],
+        "replace": false
+      },
+      "map": {
+        "timestamp": 1,
+        "level": 2,
+        "message": 2
+      }
+    }
+  },
+  "files": [
+    {
+      "name": "startup",
+      "path": "dystopia/dystopia.config",
+      "handler": "json",
+      "default": true
+    }
+  ],
+  "title": "Dystopia Config",
+  "type": "object",
+  "properties": {
+    "+hostname": {
+      "title": "Server Name",
+      "description": "The name of your server. This is how it will display in the server browser.",
+      "type": "string",
+      "default": "A CreeperHost Server!"
+    },
+    "+map": {
+        "title": "Map",
+        "type": "string",
+        "default": "dys_broadcast"
+      },
+    "+sv_lan": {
+        "title": "sv_lan",
+        "type": "number",
+        "default": 0
+    },
+    "+sv_allowdownload": {
+        "title": "sv_allowdownload",
+        "type": "number",
+        "default": 1
+    },
+    "+sv_allowupload": {
+        "title": "sv_allowupload",
+        "type": "number",
+        "default": 1
+    },
+    "+maxplayers": {
+        "title": "maxplayers",
+        "type": "number",
+        "default": 16
+    },
+    "+sv_cheats": {
+        "title": "sv_cheats",
+        "type": "number",
+        "default": 0
+    }
+  }
+}
