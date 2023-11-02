@@ -1,0 +1,710 @@
+{
+    "panel": {
+    "console": {
+      "send": "socket"
+    }
+  },
+  "files": [
+    {
+      "name": "ini",
+      "path": "arksa/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini",
+      "handler": "ini",
+      "sections": true,
+      "default": true
+    },
+    {
+      "name": "startup",
+      "path": "arksa/arksa.config",
+      "handler": "json",
+      "default": false
+    }
+  ],
+  "title": "ARK Survival Ascended Config",
+  "type": "object",
+  "properties": {
+   "listen": {
+     "title": "",
+     "type": "hidden",
+     "default": "",
+     "file":"startup"
+    },
+    "SessionName": {
+      "title": "Server Name",
+      "description": "The name of your server. This is how it will display in the server browser.",
+      "type": "string",
+      "default": "A CreeperHost Server!",
+      "file":"startup"   
+    },
+    "MaxPlayers": {
+      "title": "Max players",
+      "type": "number",
+      "default": 70,
+      "file": "startup"
+    },
+    "Port": {
+        "title": "Game Port",
+        "description": "The port for the game",
+        "type": "number",
+        "default": 7777,
+        "file": "startup"
+    },
+    "QueryPort": {
+        "title": "Steam Query Port",
+        "description": "The port used for steams query",
+        "type": "number",
+        "default": 27015,
+        "file": "startup"
+    },
+    "rcon_pass": {
+      "title": "Admin password",
+      "description": "Admin password. Required to run admin commands in game or via RCon.",
+      "type": "string",
+      "default": "",
+      "required": true,
+      "file": "startup"
+    },
+    "rcon_port": {
+      "title": "RCON Port",
+      "description": "Port the server will listen for RCON on",
+      "type": "number",
+      "default": 32330,
+      "required": true,
+      "file": "startup"
+    },
+    "ServerSettings#allowThirdPersonPlayer": {
+        "title": "Third person enabled",
+        "description": "Enables 3rd Person view",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#AllowCaveBuildingPvE": {
+        "title": "Allow Cave Building PvE",
+        "description": "Allows building in caves when PvE mode is also enabled.",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#alwaysNotifyPlayerJoined": {
+        "title": "Notify on join",
+        "description": "Players will always get notified if someone joins the server",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#alwaysNotifyPlayerLeft": {
+        "title": "Notify on leave",
+        "description": "Players will always get notified if someone leaves the server",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#bAllowFlyerCarryPvE": {
+        "title": "Allow flying carry",
+        "description": "Permit flying dinosaurs to pick up other dinosaurs and players when mounted by a player in PvE",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#bDisableStructureDecayPvE": {
+        "title": "Structure decay disable",
+        "description": "Disable the gradual (7 days) decay of player structures",
+        "type": "boolean",
+        "default": false      
+    },
+    "ServerSettings#DayCycleSpeedScale": {
+        "title": "Day Cycle Speed Scale",
+        "description": "Specifies the scaling factor for the passage of time",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#DayTimeSpeedScale": {
+        "title": "Day Time Speed Scale",
+        "description": "Specifies the scaling factor for the passage of time in the ARK during the day",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#NightTimeSpeedScale": {
+        "title": "Night Time Speed Scale",
+        "description": "Specifies the scaling factor for the passage of time in the ARK during night time",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#DinoCharacterFoodDrainMultiplier": {
+        "title": "Dino Character Food Drain Multiplier",
+        "description": "Specifies the scaling factor for dinosaurs' food consumption. Higher values increase food consumption",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#DinoCharacterHealthRecoveryMultiplier": {
+        "title": "Dino Character Health Recovery Multiplier",
+        "description": "Specifies the scaling factor for dinosaurs' health recovery. Higher values increase the recovery rate",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#DinoCharacterStaminaDrainMultiplier": {
+        "title": "Dino Character Stamina Drain Multiplier",
+        "description": "Specifies the scaling factor for dinosaurs' stamina consumption. Higher values increase stamina consumption",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#DinoCountMultiplier": {
+        "title": "Dino Count Multiplier",
+        "description": "Specifies the scaling factor for dinosaur spawns. Higher values increase the number of dinosaurs spawned throughout the ARK.",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#DinoDamageMultiplier": {
+        "title": "Dino Damage Multiplier",
+        "description": "Specifies the scaling factor for the damage dinosaurs deal with their attacks. The default value 1 provides normal damage. Higher values increase damage. Lower values decrease it.",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#DinoResistanceMultiplier": {
+        "title": "Dino Resistance Multiplier",
+        "description": "Specifies the scaling factor for the resistance to damage dinosaurs receive when attacked",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#globalVoiceChat": {
+        "title": "Global voice chat",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#HarvestAmountMultiplier": {
+        "title": "Harvest Amount Multiplier",
+        "description": "Specifies the scaling factor for yields from all harvesting activities (chopping down trees, picking berries, carving carcasses, mining rocks, etc.)",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#HarvestHealthMultiplier": {
+        "title": "Harvest Health Multiplier",
+        "description": "Specifies the scaling factor for the \"health\" of items that can be harvested (trees, rocks, carcasses, etc.)",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#MaxStructuresInRange": {
+        "title": "Range between structures",
+        "description": "(OUTDATED) Specifies the minimum required distance between player structures by different players or tribes",
+        "type": "number",
+        "default": 1300
+    },
+    "ServerSettings#noTributeDownloads": {
+        "title": "Disable tribute download",
+        "description": "Disables downloading characters from other servers",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#PreventDownloadSurvivors": {
+        "title": "Prevent Download Survivors",
+        "description": "Prevents the download of survivors",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#PreventDownloadItems": {
+        "title": "Prevent Download Items",
+        "description": "Prevents the download of items",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#PreventDownloadDinos": {
+        "title": "Prevent Download Dinos",
+        "description": "Prevents the download of dinos",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#PlayerCharacterFoodDrainMultiplier": {
+        "title": "Player Character Food Drain Multiplier",
+        "description": "Specifies the scaling factor for player characters' food consumption",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#PlayerCharacterHealthRecoveryMultiplier": {
+        "title": "Player Character Health Recovery Multiplier",
+        "description": "Specifies the scaling factor for player characters' health recovery. Higher values increase the recovery rate",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#PlayerCharacterStaminaDrainMultiplier": {
+        "title": "Player Character Stamina Drain Multiplier",
+        "description": "Specifies the scaling factor for player characters' stamina consumption. Higher values increase stamina consumption",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#PlayerCharacterWaterDrainMultiplier": {
+        "title": "Player Character Water Drain Multiplier",
+        "description": "Specifies the scaling factor for player characters' water consumption. Higher values increase water consumption",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#PlayerDamageMultiplier": {
+        "title": "Player Damage Multiplier",
+        "description": "Specifies the scaling factor for the damage players deal with their attacks.",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#PlayerResistanceMultiplier": {
+        "title": "Player Resistance Multiplier",
+        "description": "Specifies the scaling factor for the resistance to damage players receive when attacked",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#proximityChat": {
+        "title": "Proximity chat",
+        "description:": "If enabled, only players near each other can chat to each other.",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#ResourceNoReplenishRadiusPlayers": {
+        "title": "Resource No Replenish Radius Players",
+        "description": "Defines the distance where there are no resources respawning when being close to a player",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#ResourceNoReplenishRadiusStructures": {
+        "title": "Resource No Replenish Radius Structures",
+        "description": "Defines the distance where there are no resources respawning when being close to a structure",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#ResourcesRespawnPeriodMultiplier": {
+        "title": "Resources Respawn Period Multiplier",
+        "description": "Specifies the scaling factor for the respawn rate for resource nodes (trees, rocks, bushes, etc.)",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#ServerAdminPassword": {
+        "title": "Server Admin Password",
+        "description": "If specified, players must provide this password (via the in-game console) to gain access to administrator commands on the server.",
+        "type": "string",
+        "default": ""
+    },
+    "ServerSettings#ServerCrosshair": {
+        "title": "Enable the crosshair",
+        "description": "Enable a crosshair for player on your server",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#serverForceNoHud": {
+        "title": "Disable HUD",
+        "description": "HUD force disabled for all players",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#serverHardcore": {
+        "title": "Hardcore mode",
+        "description": "Players will be reset to level 1 on death",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#ServerPassword": {
+        "title": "Server password",
+        "description": "Password required in order to join the server. Leave blank to disable.",
+        "type": "string",
+        "default": ""
+    },
+    "ServerSettings#serverPVE": {
+        "title": "Server PVE mode",
+        "description": "If enabled, PVP is disabled and the server will be PVE (Player Versus Environment) only",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#ShowMapPlayerLocation": {
+        "title": "Show Map Player Location",
+        "description": "Show each player their own precise position when they view their map",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#StructureDamageMultiplier": {
+        "title": "Structure Damage Multiplier",
+        "description": "Specifies the scaling factor for the damage structures deal with their attacks (i.e. spiked walls)",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#StructureResistanceMultiplier": {
+        "title": "Structure Resistance Multiplier",
+        "description": "SSpecifies the scaling factor for the resistance to damage structures receive when attacked",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#TamedDinoDamageMultiplier": {
+        "title": "Tamed Dino Damage Multiplier",
+        "description": "Specifies the scaling factor for tamed dinosaurs damage.",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#TamedDinoResistanceMultiplier": {
+        "title": "Tamed Dino Resistance Multiplier",
+        "description": "Specifies the scaling factor for dinosaurs fortitude.",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#TamingSpeedMultiplier": {
+        "title": "Taming Speed Multiplier",
+        "description": "Specifies the scaling factor for dinosaur taming speed.",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#XPMultiplier": {
+        "title": "XP Multiplier",
+        "description": "Specifies the scaling factor for the experience received by players, tribes and dinosaurs for various actions",
+        "type": "number",
+        "default": 1.00000      
+    },
+    "ServerSettings#EnablePVPGamma": {
+        "title": "Enable PVP Gamma",
+        "description": "Allows or disallows usage of gamma on PVP servers",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#EnablePVEGamma": {
+        "title": "Enable PVE Gamma",
+        "description": "Allows or disallows usage of gamma on PVE servers",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#SpectatorPassword": {
+        "title": "Spectator Password",
+        "description": "To use non-admin spectator, the server must specify a spectator password. Then any client can use these console commands: requestspectator and stopspectating. See patch 191.0 for more information and hotkeys",
+        "type": "string",
+        "default": ""
+    },
+    "ServerSettings#DifficultyOffset": {
+        "title": "Difficulty offset",
+        "description": "Specifies the difficulty level of the creatures and the quality (and frequency) of loot spawned by the server. At 0.0, creatures and loot scale down by approximately 50%. At 1.0, they scale up by approximately 300%.",
+        "type": "number",
+        "default": 0.50000
+    },
+    "ServerSettings#PvEStructureDecayPeriodMultiplier": {
+        "title": "PvE Structure Decay Period Multiplier",
+        "description": "Specifies the scaling factor for the decay rate of player structures in PvE mode.",
+        "type": "number",
+        "default": 1.00000
+    },
+    "ServerSettings#PvEStructureDecayDestructionPeriod": {
+        "title": "PvE Structure Decay Destruction Period",
+        "description": "Specifies the time required for player structures to decay in PvE mode.",
+        "type": "number",
+        "default": 1.00000
+    },
+    "ServerSettings#Banlist": {
+        "title": "Banlist",
+        "description": "Uses the global banlist of ARK to disallow players' access who have been identified as cheaters",
+        "type": "string",
+        "default": "http://arkdedicated.com/banlist.txt"
+    },
+    "ServerSettings#PvPStructureDecay": {
+        "title": "PvP Structure Decay",
+        "description": "Activates (true) oder deactivates (false) the structure decay on PVP servers",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#DisableDinoDecayPvE": {
+        "title": "Disable Dino Decay PvE",
+        "description": "Deactivates the unclaiming functions for dinosaurs on PVE servers",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#PvEDinoDecayPeriodMultiplier": {
+        "title": "PvE Dino Decay Period Multiplier",
+        "description": "Multiplier value for the unclaiming speed of dinosaurs",
+        "type": "number",
+        "default": 1.00000
+    },
+    "ServerSettings#AdminLogging": {
+        "title": "Admin Logging",
+        "description": "Enables the output of cheat commands that admins used (will be shown in chat)",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#MaxTamedDinos": {
+        "title": "Max Tamed Dinos",
+        "description": "Defines the maximum amount of tamed dinos on the island",
+        "type": "number",
+        "default": 8000
+    },
+    "ServerSettings#MaxNumbersofPlayersInTribe": {
+        "title": "Max Numbers of Players In Tribe",
+        "description": "SOTF setting: Defines the maximum player limit per tribe",
+        "type": "number",
+        "default": 2
+    },
+    "ServerSettings#BattleNumOfTribestoStartGame": {
+        "title": "Battle Num Of Tribes to Start Game",
+        "description": "SOTF setting: Defines how many tribes must have been created before the countdown for game start begins",
+        "type": "number",
+        "default": 2
+    },
+    "ServerSettings#TimeToCollapseROD": {
+        "title": "Time To Collapse ROD",
+        "description": "SOTF setting: Defines the time period for the force field to collapse",
+        "type": "number",
+        "default": 100
+    },
+    "ServerSettings#BattleAutoStartGameInterval": {
+        "title": "Battle Auto Start Game Interval",
+        "description": "SOTF setting: Defines the length of the countdown before match begins",
+        "type": "number",
+        "default": 100
+    },
+    "ServerSettings#BattleSuddenDeathInterval": {
+        "title": "Battle Sudden Death Interval",
+        "description": "SOTF setting: Defines the time before sudden death starts",
+        "type": "number",
+        "default": 300
+    },
+    "ServerSettings#KickIdlePlayersPeriod": {
+        "title": "Kick Idle Players Period",
+        "description": "Time period until an idling player will be kicked from server",
+        "type": "number",
+        "default": 1800
+    },
+    "ServerSettings#PerPlatformMaxStructuresMultiplier": {
+        "title": "Per Platform Max Structures Multiplier",
+        "description": "Defines the multiplicator for structures on saddle plattforms (Please use with caution - too high values may lead to a massive lack of performance)",
+        "type": "number",
+        "default": 1.00000
+    },
+    "ServerSettings#StructureDamageRepairCooldown": {
+        "title": "Structure Damage Repair Cooldown",
+        "description": "Defines the cooldown time when a previously damaged structure can be repaired again. (0 allows the structure to be always repaired)",
+        "type": "number",
+        "default": 180
+    },
+    "ServerSettings#bForceAllStructureLocking": {
+        "title": "Force All Structure Locking",
+        "description": "Server Option to allow Locking All Item Containers",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#AutoDestroyOldStructuresMultiplier": {
+        "title": "Auto Destroy Old Structures Multiplier",
+        "description": "Server Option to allow Auto-Destroying Structures after sufficient \"no nearby Tribe\" time has passed (defined as a multiplier of the Allow Claim period)",
+        "type": "number",
+        "default": 0.00000
+    },
+    "ServerSettings#MaxPlatformSaddleStructureLimit": {
+        "title": "Max Platform Saddle Structure Limit",
+        "description": "Defines the maximum number of structures on top of the saddle platform",
+        "type": "number",
+        "default": 100
+    },
+    "ServerSettings#bPassiveDefensesDamageRiderlessDinos": {
+        "title": "Passive Defenses Damage Riderless Dinos",
+        "description": "Wild dinos or dinos without a rider can take damage from defense structures like spikewalls if this setting is activated",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#AutoSavePeriodMinutes": {
+        "title": "Auto Save Period Minutes",
+        "description": "After which time period (in minutes) the server should auto-save the game? (Hint: A more frequent interval may lead some lags)",
+        "type": "number",
+        "default": 20
+    },
+    "ServerSettings#RCONServerGameLogBuffer": {
+        "title": "RCON Server Game Log Buffer",
+        "description": "How many chat lines should be available in RCON?",
+        "type": "number",
+        "default": 600
+    },
+    "ServerSettings#OverrideStructurePlatformPrevention": {
+        "title": "Override Structure Platform Prevention",
+        "description": "Determines if turrets are allowed on moving platforms or not. Yes will prevent it. No will allow it",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#PreventOfflinePvPInterval": {
+        "title": "Prevent Offline PvP Interval",
+        "description": "Defines the time period of being offline so that a player will be really considered as being offline.",
+        "type": "number",
+        "default": 60.0
+    },
+    "ServerSettings#bPvPDinoDecay": {
+        "title": "PvP Dino Decay",
+        "description": "Determines if dinos of a player/tribe are also protected in the activated offline raid protection",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#bPvPStructureDecay": {
+        "title": "PvP Structure Decay",
+        "description": "Determines if structures of a player/tribe are also protected in the activated offline raid protection",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#DisableImprintDinoBuff": {
+        "title": "Disable Imprint Dino Buff",
+        "description": "Deactivates (no) the bonus stats for a dino if you raise the baby by yourself",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#AllowAnyoneBabyImprintCuddle": {
+        "title": "Allow Anyone Baby Imprint Cuddle",
+        "description": "Allows everybody to kuddle with the dino baby",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#EnableExtraStructurePreventionVolumes": {
+        "title": "Enable Extra Structure Prevention Volumes",
+        "description": "Prevents the building of structures on places which are rich of resources",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#ShowFloatingDamageText": {
+        "title": "Show Floating Damage Text",
+        "description": "Shows dealt damages in a RPG style",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#DestroyUnconnectedWaterPipes": {
+        "title": "Destroy Unconnected Water Pipes",
+        "description": "If active, it will destroy the pipes automatically after two real-time days, if unconnected to any non-pipe (directly or indirectly) and no allied player is nearby",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#OverrideOfficialDifficulty": {
+        "title": "Override Official Difficulty",
+        "description": "Overwrites the difficulty settings",
+        "type": "number",
+        "default": 1.0
+    },
+    "ServerSettings#TheMaxStructuresInRange": {
+        "title": "The Max Structures In Range",
+        "description": "New value for the maximum allowed structures nearby",
+        "type": "number",
+        "default": 10500
+    },
+    "ServerSettings#MinimumDinoReuploadInterval": {
+        "title": "Minimum Dino Reupload Interval",
+        "description": "Number of seconds cooldown between allowed Dino re-uploads (defaults to 0, set to 43200 on Official Servers which is 12 hours). Remaining cooldown time is displayed on the Dino Upload UI",
+        "type": "number",
+        "default": 0
+    },
+    "ServerSettings#PvEAllowStructuresAtSupplyDrops": {
+        "title": "PvE Allow Structures At Supply Drops",
+        "description": "Enable if you want to allow being able to build structures nearby supply drop",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#NPCNetworkStasisRangeScalePlayerCountStart": {
+        "title": "NPC Network Stasis Range Scale Player Count Start",
+        "description": "Range scaling-for-player-count option to scale server performance for more players",
+        "type": "number",
+        "default": 70
+    },
+    "ServerSettings#NPCNetworkStasisRangeScalePlayerCountEnd": {
+        "title": "NPC Network Stasis Range Scale Player Count End",
+        "description": "Range scaling-for-player-count option to scale server performance for more players",
+        "type": "number",
+        "default": 120
+    },
+    "ServerSettings#NPCNetworkStasisRangeScalePercentEnd": {
+        "title": "NPC Network Stasis Range Scale Percent End",
+        "description": "Range scaling-for-player-count option to scale server performance for more players",
+        "type": "number",
+        "default": 0.50
+    },
+    "ServerSettings#MaxPersonalTamedDinos": {
+        "title": "Max Personal Tamed Dinos",
+        "description": "Quantity of dinos that a tribe is allowed to have (Default on official PVE servers is 500)",
+        "type": "number",
+        "default": 500
+    },
+    "ServerSettings#AutoDestroyDecayedDinos": {
+        "title": "Auto Destroy Decayed Dinos",
+        "description": "Option to auto-destroy claimable decayed dinos on load, rather than have them remain around as claimable. Official PvE servers now have this enabled",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#ClampItemSpoilingTimes": {
+        "title": "Clamp Item Spoiling Times",
+        "description": "Will clamp all spoiling times to the items' maximum spoiling times. Useful if any infinite-spoiling exploits were used on the server and you wish to clean them up. Could potentially cause issues with Mods that alter spoiling time, hence it is an option.",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#UseOptimizedHarvestingHealth": {
+        "title": "Use Optimized Harvesting Health",
+        "description": "Server custom \"HarvestAmountMultiplier\" now works as it used to, to bias towards yielding rarer items. This is more costly for server performance, so if you want a more \"optimized\" server with high HarvestAmountMultiplier (but less rare items), you can launch with \"yes\" in this setting here",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#AllowCrateSpawnsOnTopOfStructures": {
+        "title": "Allow Crate Spawns On Top Of Structures",
+        "description": "Servers can now allow from-the-air Supply Crates to appear on top of Structures, rather than being prevented by Structures. Enabled on Official Servers",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#ForceFlyerExplosives": {
+        "title": "Force Flyer Explosives",
+        "description": "Made all Flyers except for Quetz and Wyvern become 'grounded' if you put a C4 on them. To disable this behavior, launch server with \"yes\"",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#PreventOfflinePvP": {
+        "title": "Prevent Offline PvP",
+        "description": "Enables ORP on PVE/PVP servers if enabled",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#AllowFlyingStaminaRecovery": {
+        "title": "Allow Flying Stamina Recovery",
+        "description": "Flyer Nerf (to allow server to recover Stamina when standing on a Flyer",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#AllowMultipleAttachedC4": {
+        "title": "Allow Multiple Attached C4",
+        "description": "Limited one C4 attached per dino, unless you allow more than one C4",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#OxygenSwimSpeedStatMultiplier": {
+        "title": "Oxygen Swim Speed Stat Multiplier",
+        "description": "Use this to set how swim speed is multiplied by level spent in oxygen.",
+        "type": "number",
+        "default": 1.00
+    },
+    "ServerSettings#bPvEDisableFriendlyFire": {
+        "title": "PvE Disable Friendly Fire",
+        "description": "When enabled, you are now able to harvest a slaughtered Ovis",
+        "type": "boolean",
+        "default": true
+    },
+    "ServerSettings#ServerAutoForceRespawnWildDinosInterval": {
+        "title": "Server Auto Force Respawn Wild Dinos Interval",
+        "description": "This will force respawns of dinos on servers to prevent certain dino types (like the Basilo and Spino) from becoming depopulated on long running servers. Specify a value in seconds (86400 means a forced respawn after one day (realtime) for example)",
+        "type": "number",
+        "default": 86400
+    },
+    "ServerSettings#DisableWeatherFog": {
+        "title": "Disable Weather Fog",
+        "description": "Server option to disable fog",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#RandomSupplyCratePoints": {
+        "title": "Random Supply Crate Points",
+        "description": "Server Option to make Supply Crates random",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#CrossARKAllowForeignDinoDownloads": {
+        "title": "Cross ARK Allow Foreign Dino Downloads",
+        "description": "This allows you to download Non-Aberration Dinos on Aberration",
+        "type": "boolean",
+        "default": false
+    },
+    "ServerSettings#PersonalTamedDinosSaddleStructureCost": {
+        "title": "Personal Tamed Dinos Saddle Structure Cost",
+        "description": "Defines how many tame slots are being used by a saddle platform (with structures) - Default: 19",
+        "type": "number",
+        "default": 19
+    },
+    "MessageOfTheDay#Duration": {
+        "title": "MOTD Duration",
+        "description": "Specifies the duration of the welcome message",
+        "type": "number",
+        "default": 30
+    },
+    "MessageOfTheDay#Message": {
+        "title": "MOTD Message",
+        "description": "Defines a welcome message",
+        "type": "string",
+        "default": "CreeperHost ARK Server!"
+    }
+  }
+}

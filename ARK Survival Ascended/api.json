@@ -1,0 +1,21 @@
+{
+    "path": "arksa",
+    "type": "game",
+    "daemon": "ArkAscendedServer.exe",
+    "displayName": "ARK: Survival Ascended",
+    "runningCount": 2,
+    "stopCommand": false,
+    "startCommand": "ShooterGame/Binaries/Win64/ArkAscendedServer.exe TheIsland_WP?{{CONFIGARGS}} -NoBattlEye | ts",
+    "logLocation": "ShooterGame/Saved/Logs/ShooterGame.log",
+    "icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/2430930/655cc2012105979c2b8e4821d568351c86b22be7.jpg",
+    "kvSeperator": "=",
+    "argSeperator": "?",
+    "requiresFB": true,
+    "windows": true,
+    "steam": {
+      "id": 2430930,
+      "name": "ARK: Survival Ascended Dedicated Server",
+      "minPackage": 128,
+      "icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/2430930/655cc2012105979c2b8e4821d568351c86b22be7.jpg"
+    }
+  }
